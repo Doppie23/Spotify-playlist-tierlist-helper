@@ -1,0 +1,848 @@
+export const Playlists_test = [
+  {
+    collaborative: false,
+    description: "Unwind to these calm classical guitar pieces.",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/37i9dQZF1DX0jgyAiPl8Af",
+    },
+    href: "https://api.spotify.com/v1/playlists/37i9dQZF1DX0jgyAiPl8Af",
+    id: "37i9dQZF1DX0jgyAiPl8Af",
+    images: [
+      {
+        height: null,
+        url: "https://i.scdn.co/image/ab67706f00000003c1811d50fbd4df02ea3b06a3",
+        width: null,
+      },
+    ],
+    name: "Peaceful Guitar",
+    owner: {
+      display_name: "Spotify",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/spotify",
+      },
+      href: "https://api.spotify.com/v1/users/spotify",
+      id: "spotify",
+      type: "user",
+      uri: "spotify:user:spotify",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTY4MjAzODgwMCwwMDAwMDAwMDZhNWU3NTU4NGMxZGUzNDQ1NGI1MjkwNTgwOWIyZjk3",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/37i9dQZF1DX0jgyAiPl8Af/tracks",
+      total: 303,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:37i9dQZF1DX0jgyAiPl8Af",
+  },
+  {
+    collaborative: false,
+    description:
+      "Welcome to the Complete Collection of ERA. #Epic #Battle #Film #Movie #VideoGames #Ameno #Dorime #Epique #Heroique #Fantastique #Fabuleux #Legend #Tale #Hero #ERA #Fantasy ",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/3v5zR8etcVnq0q4exHK006",
+    },
+    href: "https://api.spotify.com/v1/playlists/3v5zR8etcVnq0q4exHK006",
+    id: "3v5zR8etcVnq0q4exHK006",
+    images: [
+      {
+        height: null,
+        url: "https://i.scdn.co/image/ab67706c0000bebbe35f99c385ec41d2a5ebdb6f",
+        width: null,
+      },
+    ],
+    name: "ERA - THE COMPLETE COLLECTION",
+    owner: {
+      display_name: "ERAmusic.official",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/3cdymdq56zttndnq73g9j7fhf",
+      },
+      href: "https://api.spotify.com/v1/users/3cdymdq56zttndnq73g9j7fhf",
+      id: "3cdymdq56zttndnq73g9j7fhf",
+      type: "user",
+      uri: "spotify:user:3cdymdq56zttndnq73g9j7fhf",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "ODEsZDI2MTRjNGQ3MjE3NjEwZTY0ZjMyN2NmMmY2ZDg3ZTdjOTAxNDFiYw==",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/3v5zR8etcVnq0q4exHK006/tracks",
+      total: 91,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:3v5zR8etcVnq0q4exHK006",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/4v770PzDbz9OBOep7KEFFL",
+    },
+    href: "https://api.spotify.com/v1/playlists/4v770PzDbz9OBOep7KEFFL",
+    id: "4v770PzDbz9OBOep7KEFFL",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2730ae0f5a54653a8ed43554118ab67616d0000b27334b5a862daa4b76b7b68eb0fab67616d0000b2734a91a2a7d9ba914a1d79b7d2ab67616d0000b273fc6f658470bc69eef6e64bfc",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2730ae0f5a54653a8ed43554118ab67616d0000b27334b5a862daa4b76b7b68eb0fab67616d0000b2734a91a2a7d9ba914a1d79b7d2ab67616d0000b273fc6f658470bc69eef6e64bfc",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2730ae0f5a54653a8ed43554118ab67616d0000b27334b5a862daa4b76b7b68eb0fab67616d0000b2734a91a2a7d9ba914a1d79b7d2ab67616d0000b273fc6f658470bc69eef6e64bfc",
+        width: 60,
+      },
+    ],
+    name: "Christelijke Kerst muziek",
+    owner: {
+      display_name: "matheysenmarianne",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/matheysenmarianne",
+      },
+      href: "https://api.spotify.com/v1/users/matheysenmarianne",
+      id: "matheysenmarianne",
+      type: "user",
+      uri: "spotify:user:matheysenmarianne",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "NDgsZmIzOGMyNDY2NTIxODdmMmQwNzVlYWNhYjNhMzlhOTQ5OWI1N2VlNA==",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/4v770PzDbz9OBOep7KEFFL/tracks",
+      total: 128,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:4v770PzDbz9OBOep7KEFFL",
+  },
+  {
+    collaborative: false,
+    description:
+      "De 300 mooiste klassieke werken gekozen door de NPO Radio 4 luisteraars! Hiermee kom je de dag heerlijk door - bekend maar toch verrassend.",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/7cJVFrTw8u4NUw5w2QNN4k",
+    },
+    href: "https://api.spotify.com/v1/playlists/7cJVFrTw8u4NUw5w2QNN4k",
+    id: "7cJVFrTw8u4NUw5w2QNN4k",
+    images: [
+      {
+        height: null,
+        url: "https://i.scdn.co/image/ab67706c0000bebbe78c4f074b0b8df7094201e7",
+        width: null,
+      },
+    ],
+    name: "Hart & Ziel Lijst 2016 - NPO Radio 4",
+    owner: {
+      display_name: "NPO Klassiek",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/radio4nl",
+      },
+      href: "https://api.spotify.com/v1/users/radio4nl",
+      id: "radio4nl",
+      type: "user",
+      uri: "spotify:user:radio4nl",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "Mzk2LDdlZjEwMTE0MDVhMTY1YjU0Nzk4N2JkZTNhNGFlMWVkYjQ3YjkzZjk=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/7cJVFrTw8u4NUw5w2QNN4k/tracks",
+      total: 504,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:7cJVFrTw8u4NUw5w2QNN4k",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/4f2qWrcs7FvIXTHiuRJduA",
+    },
+    href: "https://api.spotify.com/v1/playlists/4f2qWrcs7FvIXTHiuRJduA",
+    id: "4f2qWrcs7FvIXTHiuRJduA",
+    images: [],
+    name: "Mijn playlist 9",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MyxkNTNkMGQ2MjUzNmRkZmU0MDczNDE1ZTU2NzE0NzM3OTQxODM1ZTBl",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/4f2qWrcs7FvIXTHiuRJduA/tracks",
+      total: 0,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:4f2qWrcs7FvIXTHiuRJduA",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/7AldBVl3K1jocqUjM0L85i",
+    },
+    href: "https://api.spotify.com/v1/playlists/7AldBVl3K1jocqUjM0L85i",
+    id: "7AldBVl3K1jocqUjM0L85i",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b273073e9588b2fe539317dc599aab67616d0000b2731da2e316376d4701ace02c53ab67616d0000b2736a2650c4173c81735e83b360ab67616d0000b273f817f90531b8b396b370ab0d",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b273073e9588b2fe539317dc599aab67616d0000b2731da2e316376d4701ace02c53ab67616d0000b2736a2650c4173c81735e83b360ab67616d0000b273f817f90531b8b396b370ab0d",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b273073e9588b2fe539317dc599aab67616d0000b2731da2e316376d4701ace02c53ab67616d0000b2736a2650c4173c81735e83b360ab67616d0000b273f817f90531b8b396b370ab0d",
+        width: 60,
+      },
+    ],
+    name: ":'(",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MzkzLDljZWM0NzBlNzRhOTRlZWM1OTBmYjliMGMyNjc1MjNkYWUwYWZlZDk=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/7AldBVl3K1jocqUjM0L85i/tracks",
+      total: 282,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:7AldBVl3K1jocqUjM0L85i",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/4R2Q2nLZQ7GjaUaYJKBDdf",
+    },
+    href: "https://api.spotify.com/v1/playlists/4R2Q2nLZQ7GjaUaYJKBDdf",
+    id: "4R2Q2nLZQ7GjaUaYJKBDdf",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2737ac1ee421fffad4d0d535157ab67616d0000b273869b7fcee266e92ab7402699ab67616d0000b273e7ee78cf8b72d6b261e067c0ab67616d0000b273f817f90531b8b396b370ab0d",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2737ac1ee421fffad4d0d535157ab67616d0000b273869b7fcee266e92ab7402699ab67616d0000b273e7ee78cf8b72d6b261e067c0ab67616d0000b273f817f90531b8b396b370ab0d",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2737ac1ee421fffad4d0d535157ab67616d0000b273869b7fcee266e92ab7402699ab67616d0000b273e7ee78cf8b72d6b261e067c0ab67616d0000b273f817f90531b8b396b370ab0d",
+        width: 60,
+      },
+    ],
+    name: ":')",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "ODcxLGYzYjQ0YjFmM2U3ODNmYzBmYmNjZmQ5YjI2ZmQ2NDMyYzQ3MjFmOTk=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/4R2Q2nLZQ7GjaUaYJKBDdf/tracks",
+      total: 826,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:4R2Q2nLZQ7GjaUaYJKBDdf",
+  },
+  {
+    collaborative: false,
+    description: "neutraal",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/2IKaDrDzm63HNZhThmoDYa",
+    },
+    href: "https://api.spotify.com/v1/playlists/2IKaDrDzm63HNZhThmoDYa",
+    id: "2IKaDrDzm63HNZhThmoDYa",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2730b4df34612f851b639959f9aab67616d0000b27357cd4641752f4c66f9fca441ab67616d0000b2736abf451a8499e812a22f989eab67616d0000b2736de69b5943c5d6b3ab08cd9c",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2730b4df34612f851b639959f9aab67616d0000b27357cd4641752f4c66f9fca441ab67616d0000b2736abf451a8499e812a22f989eab67616d0000b2736de69b5943c5d6b3ab08cd9c",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2730b4df34612f851b639959f9aab67616d0000b27357cd4641752f4c66f9fca441ab67616d0000b2736abf451a8499e812a22f989eab67616d0000b2736de69b5943c5d6b3ab08cd9c",
+        width: 60,
+      },
+    ],
+    name: ":)",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MjkyLDA0NmUzOWM3ZjdmNTI5ODU3ZjgyZjRmMTlmMjliNDZlMjQwMzUyMWM=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/2IKaDrDzm63HNZhThmoDYa/tracks",
+      total: 149,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:2IKaDrDzm63HNZhThmoDYa",
+  },
+  {
+    collaborative: false,
+    description: "rock achtig",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/0cVM6rbWnCjrY6k2rO9Cj9",
+    },
+    href: "https://api.spotify.com/v1/playlists/0cVM6rbWnCjrY6k2rO9Cj9",
+    id: "0cVM6rbWnCjrY6k2rO9Cj9",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b27358046dd85ee7d8a5c78f6d47ab67616d0000b273893be6684a1ba047d8fc8d9bab67616d0000b273b734c0ec6754439fe457165dab67616d0000b273e081ca83069e0085ef7af583",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b27358046dd85ee7d8a5c78f6d47ab67616d0000b273893be6684a1ba047d8fc8d9bab67616d0000b273b734c0ec6754439fe457165dab67616d0000b273e081ca83069e0085ef7af583",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b27358046dd85ee7d8a5c78f6d47ab67616d0000b273893be6684a1ba047d8fc8d9bab67616d0000b273b734c0ec6754439fe457165dab67616d0000b273e081ca83069e0085ef7af583",
+        width: 60,
+      },
+    ],
+    name: ">:')",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "NzQsM2EwNDVjYjA1NjMyMDM5MmQxM2Y2ZTNjOTc4NWE3MjNhNzZhYzg5Yw==",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/0cVM6rbWnCjrY6k2rO9Cj9/tracks",
+      total: 59,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:0cVM6rbWnCjrY6k2rO9Cj9",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/0GOUATcJwkfgc7gl88ScJb",
+    },
+    href: "https://api.spotify.com/v1/playlists/0GOUATcJwkfgc7gl88ScJb",
+    id: "0GOUATcJwkfgc7gl88ScJb",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b27315ec020dd9267009d19760a9ab67616d0000b2735b67e0f585195cb4f5d1dd31ab67616d0000b273a8db10e4d2b0198b9d40dd15ab67616d0000b273a9bf654776bf46895405bf94",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b27315ec020dd9267009d19760a9ab67616d0000b2735b67e0f585195cb4f5d1dd31ab67616d0000b273a8db10e4d2b0198b9d40dd15ab67616d0000b273a9bf654776bf46895405bf94",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b27315ec020dd9267009d19760a9ab67616d0000b2735b67e0f585195cb4f5d1dd31ab67616d0000b273a8db10e4d2b0198b9d40dd15ab67616d0000b273a9bf654776bf46895405bf94",
+        width: 60,
+      },
+    ],
+    name: "uncaged",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "Mzc5LGQ2ZmZiYTU2OTA0NmNmN2Q0ZTg3YmQ5Mzc5YWFhNjg3NGYyM2E4ZDA=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/0GOUATcJwkfgc7gl88ScJb/tracks",
+      total: 328,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:0GOUATcJwkfgc7gl88ScJb",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/5orxpAs0XTP72Isat4zSkJ",
+    },
+    href: "https://api.spotify.com/v1/playlists/5orxpAs0XTP72Isat4zSkJ",
+    id: "5orxpAs0XTP72Isat4zSkJ",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2730bdbfd4656953ed1fc44f0e4ab67616d0000b2735545b80a9fe26faccb5b6a51ab67616d0000b27394cfbf911b2101b7beaa8719ab67616d0000b273a267e32b3a63c3a7ab9fa983",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2730bdbfd4656953ed1fc44f0e4ab67616d0000b2735545b80a9fe26faccb5b6a51ab67616d0000b27394cfbf911b2101b7beaa8719ab67616d0000b273a267e32b3a63c3a7ab9fa983",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2730bdbfd4656953ed1fc44f0e4ab67616d0000b2735545b80a9fe26faccb5b6a51ab67616d0000b27394cfbf911b2101b7beaa8719ab67616d0000b273a267e32b3a63c3a7ab9fa983",
+        width: 60,
+      },
+    ],
+    name: "DnB",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTE2LGU0ZDlmNGRlMjgyNWJkZDdiZjcxYjZhNzE2YmNkZDllNDg4ZGNiYWM=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/5orxpAs0XTP72Isat4zSkJ/tracks",
+      total: 100,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:5orxpAs0XTP72Isat4zSkJ",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/448NwJdz4bIaVfnvUWKInk",
+    },
+    href: "https://api.spotify.com/v1/playlists/448NwJdz4bIaVfnvUWKInk",
+    id: "448NwJdz4bIaVfnvUWKInk",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b273095c7b1c4fdb6a525fb5a9b6ab67616d0000b27363ce1e484192dc3434064692ab67616d0000b273a8db10e4d2b0198b9d40dd15ab67616d0000b273e0400376382ad08454f0f19f",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b273095c7b1c4fdb6a525fb5a9b6ab67616d0000b27363ce1e484192dc3434064692ab67616d0000b273a8db10e4d2b0198b9d40dd15ab67616d0000b273e0400376382ad08454f0f19f",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b273095c7b1c4fdb6a525fb5a9b6ab67616d0000b27363ce1e484192dc3434064692ab67616d0000b273a8db10e4d2b0198b9d40dd15ab67616d0000b273e0400376382ad08454f0f19f",
+        width: 60,
+      },
+    ],
+    name: "hype",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTg2LDBlN2MxZTVlNzJhYzVkMzYwZDFjZTU4MDJjOTFhOGE5YjJlZTQ2YTU=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/448NwJdz4bIaVfnvUWKInk/tracks",
+      total: 151,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:448NwJdz4bIaVfnvUWKInk",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/3CzL2ffICc54T4nhOtYcqy",
+    },
+    href: "https://api.spotify.com/v1/playlists/3CzL2ffICc54T4nhOtYcqy",
+    id: "3CzL2ffICc54T4nhOtYcqy",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2733c60dea7917d11cccfb54949ab67616d0000b273411a017bf25405546e277aafab67616d0000b2735edc655902318d2f024dc6abab67616d0000b2738f40718549807f20ef1e14dd",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2733c60dea7917d11cccfb54949ab67616d0000b273411a017bf25405546e277aafab67616d0000b2735edc655902318d2f024dc6abab67616d0000b2738f40718549807f20ef1e14dd",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2733c60dea7917d11cccfb54949ab67616d0000b273411a017bf25405546e277aafab67616d0000b2735edc655902318d2f024dc6abab67616d0000b2738f40718549807f20ef1e14dd",
+        width: 60,
+      },
+    ],
+    name: "8bit bangers",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTEwLGU2Yjk5M2MxNWRjNzk4NDk2Nzg4YTFiMTAxNGFjY2E5ZmUwM2UyYWE=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/3CzL2ffICc54T4nhOtYcqy/tracks",
+      total: 90,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:3CzL2ffICc54T4nhOtYcqy",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/6fmfYfoFBbPjIEYe6qqqLM",
+    },
+    href: "https://api.spotify.com/v1/playlists/6fmfYfoFBbPjIEYe6qqqLM",
+    id: "6fmfYfoFBbPjIEYe6qqqLM",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2730da2271242225c89bf24fd92ab67616d0000b27321d3b8beef8ede067d6a4ca3ab67616d0000b273c5359674ed718767229bf8ecab67616d0000b273c789f1ab2e94ca42d365dffb",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2730da2271242225c89bf24fd92ab67616d0000b27321d3b8beef8ede067d6a4ca3ab67616d0000b273c5359674ed718767229bf8ecab67616d0000b273c789f1ab2e94ca42d365dffb",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2730da2271242225c89bf24fd92ab67616d0000b27321d3b8beef8ede067d6a4ca3ab67616d0000b273c5359674ed718767229bf8ecab67616d0000b273c789f1ab2e94ca42d365dffb",
+        width: 60,
+      },
+    ],
+    name: "Melodub",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "NTk5LGI2NmU0MzEwOGMwMTAxYjc0MWUxMWM0NzdkMWZhMDhkNDczMDIxNWY=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/6fmfYfoFBbPjIEYe6qqqLM/tracks",
+      total: 557,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:6fmfYfoFBbPjIEYe6qqqLM",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/2WOs7ZxrnFUGdNa2KOOW9M",
+    },
+    href: "https://api.spotify.com/v1/playlists/2WOs7ZxrnFUGdNa2KOOW9M",
+    id: "2WOs7ZxrnFUGdNa2KOOW9M",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2730b4df34612f851b639959f9aab67616d0000b2730e5311993a01fb2e7169f6a7ab67616d0000b2738f738255e971b09259d2c941ab67616d0000b273f07ec8cd2cac079d9f23d893",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2730b4df34612f851b639959f9aab67616d0000b2730e5311993a01fb2e7169f6a7ab67616d0000b2738f738255e971b09259d2c941ab67616d0000b273f07ec8cd2cac079d9f23d893",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2730b4df34612f851b639959f9aab67616d0000b2730e5311993a01fb2e7169f6a7ab67616d0000b2738f738255e971b09259d2c941ab67616d0000b273f07ec8cd2cac079d9f23d893",
+        width: 60,
+      },
+    ],
+    name: "Alles",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTQzOCxiYjI5MDM0NWU5YzBiZjJhZmRiODU2ZGIyNzY3NWQ2NDAzNjE1YjMz",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/2WOs7ZxrnFUGdNa2KOOW9M/tracks",
+      total: 1459,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:2WOs7ZxrnFUGdNa2KOOW9M",
+  },
+  {
+    collaborative: false,
+    description: "Dit is de beste afspeellijst van Nederland. (het sowieso één van de langste afspeellijsten van Nederland)",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/2zcHnOf8GDdKONd3KuPq0K",
+    },
+    href: "https://api.spotify.com/v1/playlists/2zcHnOf8GDdKONd3KuPq0K",
+    id: "2zcHnOf8GDdKONd3KuPq0K",
+    images: [
+      {
+        height: null,
+        url: "https://i.scdn.co/image/ab67706c0000bebbf217db76a65ddf391e37aa48",
+        width: null,
+      },
+    ],
+    name: "Daniël zijn muziek",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTI0MiwxY2M4YWQ2YjllZjIyMDM3ZGU1OTI3NzE1YTM5N2Q2MWJhZTE5NmQy",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/2zcHnOf8GDdKONd3KuPq0K/tracks",
+      total: 951,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:2zcHnOf8GDdKONd3KuPq0K",
+  },
+  {
+    collaborative: false,
+    description: "In deze playlist staan alleen de echte Doppie22 certified bangers. Van best naar minder best gesorteerd",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/1SHgdGkaoaRu8okz4lfqar",
+    },
+    href: "https://api.spotify.com/v1/playlists/1SHgdGkaoaRu8okz4lfqar",
+    id: "1SHgdGkaoaRu8okz4lfqar",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2733ad32e9b33f354108047460cab67616d0000b273487622cecf0d9ecb0afae36dab67616d0000b2734df9a24ee1827559b911efb2ab67616d0000b273a8db10e4d2b0198b9d40dd15",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2733ad32e9b33f354108047460cab67616d0000b273487622cecf0d9ecb0afae36dab67616d0000b2734df9a24ee1827559b911efb2ab67616d0000b273a8db10e4d2b0198b9d40dd15",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2733ad32e9b33f354108047460cab67616d0000b273487622cecf0d9ecb0afae36dab67616d0000b2734df9a24ee1827559b911efb2ab67616d0000b273a8db10e4d2b0198b9d40dd15",
+        width: 60,
+      },
+    ],
+    name: "Doppie22 certified bangers",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: true,
+    snapshot_id: "NDI4LGE2YjJhZDY0Y2UyODRkMWMwZDI1ZjRkZjg1NTBkYzg0MWFmOGU3N2M=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/1SHgdGkaoaRu8okz4lfqar/tracks",
+      total: 98,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:1SHgdGkaoaRu8okz4lfqar",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/6CY5E5zbxGXWmU3WQCdev0",
+    },
+    href: "https://api.spotify.com/v1/playlists/6CY5E5zbxGXWmU3WQCdev0",
+    id: "6CY5E5zbxGXWmU3WQCdev0",
+    images: [
+      {
+        height: 640,
+        url: "https://mosaic.scdn.co/640/ab67616d0000b2731781491af7b5332e8c7f3a0cab67616d0000b27326a8dfd4ee8892d150b8cd5cab67616d0000b2734c96b0f5a209a392712caef5ab67616d0000b27380df2ebfa9ad6b0f78d803f3",
+        width: 640,
+      },
+      {
+        height: 300,
+        url: "https://mosaic.scdn.co/300/ab67616d0000b2731781491af7b5332e8c7f3a0cab67616d0000b27326a8dfd4ee8892d150b8cd5cab67616d0000b2734c96b0f5a209a392712caef5ab67616d0000b27380df2ebfa9ad6b0f78d803f3",
+        width: 300,
+      },
+      {
+        height: 60,
+        url: "https://mosaic.scdn.co/60/ab67616d0000b2731781491af7b5332e8c7f3a0cab67616d0000b27326a8dfd4ee8892d150b8cd5cab67616d0000b2734c96b0f5a209a392712caef5ab67616d0000b27380df2ebfa9ad6b0f78d803f3",
+        width: 60,
+      },
+    ],
+    name: "Test",
+    owner: {
+      display_name: "van.opstal",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/van.opstal",
+      },
+      href: "https://api.spotify.com/v1/users/van.opstal",
+      id: "van.opstal",
+      type: "user",
+      uri: "spotify:user:van.opstal",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "OTE0LDIzMzFjOWFkODA2ZWVkYTM2YTgxYWRkMTZlZDk1NjY4ZTVkNjI0ZTU=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/6CY5E5zbxGXWmU3WQCdev0/tracks",
+      total: 115,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:6CY5E5zbxGXWmU3WQCdev0",
+  },
+  {
+    collaborative: false,
+    description: "",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/51nknA4yEVTI9w8A29UgLi",
+    },
+    href: "https://api.spotify.com/v1/playlists/51nknA4yEVTI9w8A29UgLi",
+    id: "51nknA4yEVTI9w8A29UgLi",
+    images: [
+      {
+        height: null,
+        url: "https://i.scdn.co/image/ab67706c0000bebb33923707153259439865ef90",
+        width: null,
+      },
+    ],
+    name: "amogus",
+    owner: {
+      display_name: "Machieloosterhuis",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/vj03n6hrn2h4mpjopxcs0ig2r",
+      },
+      href: "https://api.spotify.com/v1/users/vj03n6hrn2h4mpjopxcs0ig2r",
+      id: "vj03n6hrn2h4mpjopxcs0ig2r",
+      type: "user",
+      uri: "spotify:user:vj03n6hrn2h4mpjopxcs0ig2r",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MTcxLGNmNzVkMWI1ZmUzYzA4NTAyMGMxY2YwN2MyOWQwOWNlOWRlZDUxZDA=",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/51nknA4yEVTI9w8A29UgLi/tracks",
+      total: 140,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:51nknA4yEVTI9w8A29UgLi",
+  },
+  {
+    collaborative: false,
+    description: "A blend of music for van, Christianoosterhuis, Luuk, InGmAr_MoFfEl69, and 1 other. Updates daily.",
+    external_urls: {
+      spotify: "https://open.spotify.com/playlist/37i9dQZF1EJxcfrbeGz9pc",
+    },
+    href: "https://api.spotify.com/v1/playlists/37i9dQZF1EJxcfrbeGz9pc",
+    id: "37i9dQZF1EJxcfrbeGz9pc",
+    images: [
+      {
+        height: null,
+        url: "https://blend-playlist-covers.spotifycdn.com/group-blends-v1/group-blend-red-1-LARGE-en.jpg",
+        width: null,
+      },
+    ],
+    name: "Epic music (gone sus)",
+    owner: {
+      display_name: "Spotify",
+      external_urls: {
+        spotify: "https://open.spotify.com/user/spotify",
+      },
+      href: "https://api.spotify.com/v1/users/spotify",
+      id: "spotify",
+      type: "user",
+      uri: "spotify:user:spotify",
+    },
+    primary_color: null,
+    public: false,
+    snapshot_id: "MCwwMDAwMDAwMDZjZmZhMWU4MTcyZThmZWY1MWU2Mjk1ODFmZGUzOGEw",
+    tracks: {
+      href: "https://api.spotify.com/v1/playlists/37i9dQZF1EJxcfrbeGz9pc/tracks",
+      total: 50,
+    },
+    type: "playlist",
+    uri: "spotify:playlist:37i9dQZF1EJxcfrbeGz9pc",
+  },
+];
