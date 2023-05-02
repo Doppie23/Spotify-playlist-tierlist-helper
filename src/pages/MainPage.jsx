@@ -1,11 +1,11 @@
 import { Container, Button } from "@mui/material";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { useContext, useState, useEffect, createContext } from "react";
+import { useContext, useState, useRef, createContext } from "react";
 import { globalContext } from "../App";
 import { MaakGroepjes } from "../utils/RatingUtils";
 import { LogOutButton } from "../components/Backbutton";
 import DragabbleList from "../components/DraggableList";
-import { InitScoresNummers, VoegScoreBij, CreateObjectWithIdAndScore } from "../utils/RatingUtils";
+import { VoegScoreBij, CreateObjectWithIdAndScore } from "../utils/RatingUtils";
 
 import { testNummers } from "../components/LoadNummers-test-object";
 
@@ -16,9 +16,9 @@ function MainPage() {
   const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
   const [NummerScores, setNummerScores] = useState(CreateObjectWithIdAndScore(Nummers));
   const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(MaakGroepjes(Nummers));
-  const [IndexGroepNummers, setIndexGroepNummers] = useState(0);
+  const IndexGroepRef = useRef(0);
 
-  const [CurritemList, setCurrItemList] = useState(GegroepeerdeNummers[IndexGroepNummers]);
+  const [CurritemList, setCurrItemList] = useState(GegroepeerdeNummers[IndexGroepRef.current]);
 
   const NextClicked = () => {
     let NummersmetScore = { ...NummerScores };
@@ -27,15 +27,12 @@ function MainPage() {
       NummersmetScore = VoegScoreBij(NummersmetScore, index, nummer);
     });
     setNummerScores({ ...NummersmetScore });
-    if (IndexGroepNummers == GegroepeerdeNummers.length) {
+    if (IndexGroepRef.current == GegroepeerdeNummers.length - 1) {
       console.log("end of list");
       return;
     } else {
-      setIndexGroepNummers(IndexGroepNummers + 1);
-      setTimeout(() => {
-        console.log(IndexGroepNummers);
-      }, 1000);
-      setCurrItemList(GegroepeerdeNummers[IndexGroepNummers]);
+      IndexGroepRef.current += 1;
+      setCurrItemList(GegroepeerdeNummers[IndexGroepRef.current]);
     }
   };
 
@@ -45,7 +42,7 @@ function MainPage() {
     <Container sx={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
       <LogOutButton />
       <ItemsContext.Provider value={{ CurritemList, setCurrItemList }}>
-        <DragabbleList items={GegroepeerdeNummers[IndexGroepNummers]} />
+        <DragabbleList items={GegroepeerdeNummers[IndexGroepRef.current]} />
       </ItemsContext.Provider>
       <Button variant="contained" sx={{ position: "relative", top: "10%" }} endIcon={<NavigateNextIcon />} onClick={NextClicked}>
         Next

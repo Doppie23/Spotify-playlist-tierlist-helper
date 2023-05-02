@@ -17,14 +17,6 @@ function shuffle(array) {
   return array;
 }
 
-export function InitScoresNummers(Nummers) {
-  Nummers = shuffle(Nummers);
-  Nummers.forEach((nummer) => {
-    nummer.score = 0;
-  });
-  return Nummers;
-}
-
 function MaakGroepenVanVijfNummers(nummers) {
   let Nummers = [...nummers];
   function getVijfElementen(array) {
@@ -64,6 +56,7 @@ export function VoegScoreBij(ObjectNummerIds, index, gesorteerdNummer) {
 }
 
 export function CreateObjectWithIdAndScore(Nummers) {
+  shuffle(Nummers);
   let object = {};
   Nummers.forEach((nummer) => {
     object[nummer.track.id] = 0;
