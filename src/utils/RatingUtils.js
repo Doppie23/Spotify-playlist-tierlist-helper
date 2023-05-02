@@ -39,9 +39,6 @@ function MaakGroepenVanVijfNummers(nummers) {
     }
     return vijfElementen;
   }
-  if (!CheckIfNummerScoreHeeft(Nummers[0])) {
-    throw new Error("Geef de nummers eerst een standaard score");
-  }
   let groepen = [];
   let aantalGroepen = Math.ceil(Nummers.length / 5);
   for (let i = 0; i < aantalGroepen; i++) {
@@ -50,13 +47,26 @@ function MaakGroepenVanVijfNummers(nummers) {
   return groepen;
 }
 
-function CheckIfNummerScoreHeeft(nummer) {
-  return nummer.hasOwnProperty("score");
-}
-
 export function MaakGroepjes(Nummers) {
   let groepnummers = [...Nummers];
-  groepnummers = InitScoresNummers(Nummers);
   groepnummers = MaakGroepenVanVijfNummers(groepnummers);
   return groepnummers;
+}
+
+export function VoegScoreBij(ObjectNummerIds, index, gesorteerdNummer) {
+  let scorebij = 5 - index;
+  for (const [NummerID, Score] of Object.entries(ObjectNummerIds)) {
+    if (NummerID == gesorteerdNummer.track.id) {
+      ObjectNummerIds[NummerID] += scorebij;
+    }
+  }
+  return ObjectNummerIds;
+}
+
+export function CreateObjectWithIdAndScore(Nummers) {
+  let object = {};
+  Nummers.forEach((nummer) => {
+    object[nummer.track.id] = 0;
+  });
+  return object;
 }

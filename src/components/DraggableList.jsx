@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { ItemsContext } from "../pages/MainPage";
 
 const StrictModeDroppable = ({ children, ...props }) => {
   const [enabled, setEnabled] = useState(false);
@@ -16,25 +17,20 @@ const StrictModeDroppable = ({ children, ...props }) => {
   return <Droppable {...props}>{children}</Droppable>;
 };
 
-function DragabbleList({ items }) {
-  const [itemList, setItemList] = useState(items);
-
-  useEffect(() => {
-    console.log("tewast");
-    setItemList(items);
-  }, [items]);
+function DragabbleList() {
+  const { CurritemList, setCurrItemList } = useContext(ItemsContext);
 
   // Function to update list on drop
   const handleDrop = (droppedItem) => {
     // Ignore drop outside droppable container
     if (!droppedItem.destination) return;
-    var updatedList = [...itemList];
+    var updatedList = [...CurritemList];
     // Remove dragged item
     const [reorderedItem] = updatedList.splice(droppedItem.source.index, 1);
     // Add dropped item
     updatedList.splice(droppedItem.destination.index, 0, reorderedItem);
     // Update State
-    setItemList(updatedList);
+    setCurrItemList(updatedList);
   };
 
   return (
@@ -43,7 +39,7 @@ function DragabbleList({ items }) {
         <StrictModeDroppable droppableId="list-container">
           {(provided) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>
-              {itemList.map((item, index) => (
+              {CurritemList.map((item, index) => (
                 <Draggable key={item.track.id} draggableId={item.track.id} index={index}>
                   {(provided) => (
                     <div ref={provided.innerRef} {...provided.dragHandleProps} {...provided.draggableProps}>
