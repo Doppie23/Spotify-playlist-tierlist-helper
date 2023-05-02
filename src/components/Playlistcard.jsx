@@ -5,9 +5,11 @@ import { useContext } from "react";
 
 function PlaylistsCard({ playlists }) {
   const { setStage } = useContext(globalContext);
+  const { setPlaylist } = useContext(globalContext);
 
   const clickHandler = (playlist) => {
     console.log(playlist);
+    setPlaylist(playlist);
     setStage("gathernummers");
   };
 

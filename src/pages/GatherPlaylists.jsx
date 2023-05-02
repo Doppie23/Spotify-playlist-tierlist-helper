@@ -1,19 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { LogOutButton } from "../components/Backbutton";
 import { getUserPlaylists } from "../utils/spotifyUtils";
 import PlaylistsCard from "../components/Playlistcard";
 
 import { Playlists_test } from "../components/Playlistcard-test-object";
 import { Box, Container, Typography } from "@mui/material";
+import { globalContext } from "../App";
 
 function GatherPlaylists() {
   const [Playlists, setPlaylists] = useState(null);
+  const { spotifyApi } = useContext(globalContext);
 
   useEffect(() => {
+    // * voor testen
+    setPlaylists(Playlists_test);
+    // * eind
+
     // getUserPlaylists(spotifyApi).then((userPlaylists) => {
     //   setPlaylists(userPlaylists);
     // });
-    setPlaylists(Playlists_test);
   }, []);
 
   return (
