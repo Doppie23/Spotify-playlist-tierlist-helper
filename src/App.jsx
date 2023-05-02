@@ -20,11 +20,9 @@ function App() {
     // check if redirect voor auth key
     if (isRedirect()) {
       const createdapi = createSpotifyApi();
-      console.log(createdapi);
       setSpotifyApi(createdapi);
       setStage("playlist");
       setTimeout(() => {
-        console.log(spotifyApi);
         window.history.pushState({}, null, "/");
       }, 50); // hier moet perse timeout, geen idee waarom
     }

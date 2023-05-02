@@ -8,7 +8,6 @@ function PlaylistsCard({ playlists }) {
   const { setPlaylist } = useContext(globalContext);
 
   const clickHandler = (playlist) => {
-    console.log(playlist);
     setPlaylist(playlist);
     setStage("gathernummers");
   };

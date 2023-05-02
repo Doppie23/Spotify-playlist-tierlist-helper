@@ -29,7 +29,6 @@ function LoadNummers() {
 
   return (
     <Container sx={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-      <BackButton newstage="playlist" />
       <LaadWidget progress={10} />
     </Container>
   );
