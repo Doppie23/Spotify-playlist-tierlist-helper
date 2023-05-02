@@ -11,7 +11,7 @@ import createSpotifyApi from "./utils/useSpotifyApi";
 export const globalContext = createContext(null);
 
 function App() {
-  const [stage, setStage] = useState("login");
+  const [stage, setStage] = useState("app");
   const [spotifyApi, setSpotifyApi] = useState(null);
   const [Playlist, setPlaylist] = useState(null);
   const [Nummers, setNummers] = useState(null);

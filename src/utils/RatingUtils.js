@@ -17,7 +17,7 @@ function shuffle(array) {
   return array;
 }
 
-function InitScoresNummers(Nummers) {
+export function InitScoresNummers(Nummers) {
   Nummers = shuffle(Nummers);
   Nummers.forEach((nummer) => {
     nummer.score = 0;
