@@ -11,6 +11,7 @@ import {
   sortObjectbyValue,
   MaakGroepjesMetGesorteerdObject,
   CheckVoorDubbeleScores,
+  AlleRatingKeerTien,
 } from "../utils/RatingUtils";
 
 import { testNummers } from "../components/LoadNummers-test-object";
@@ -44,7 +45,7 @@ function GroveSorteer({ WhenDone }) {
         return;
       } else {
         WhenDone();
-        GrofGesorteerdeNummers.current = gesorteerdeNummers;
+        GrofGesorteerdeNummers.current = AlleRatingKeerTien(gesorteerdeNummers);
       }
 
       return;
@@ -69,7 +70,7 @@ function GroveSorteer({ WhenDone }) {
       <ItemsContext.Provider value={{ CurritemList, setCurrItemList }}>
         <DragabbleList items={GegroepeerdeNummers[IndexGroepRef.current]} />
       </ItemsContext.Provider>
-      <Button variant="contained" sx={{ position: "relative", top: "10%" }} endIcon={<NavigateNextIcon />} onClick={NextClicked}>
+      <Button variant="contained" sx={{ position: "relative", top: 10 }} endIcon={<NavigateNextIcon />} onClick={NextClicked}>
         Next
       </Button>
     </Container>

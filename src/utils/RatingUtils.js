@@ -95,9 +95,32 @@ export function CheckVoorDubbeleScores(obj) {
   const uniqueValues = new Set(values);
   for (const val of uniqueValues) {
     const count = values.filter((v) => v === val).length;
-    if (count > 3) {
+    if (count > 5) {
       return true;
     }
   }
   return false;
+}
+
+export function AlleRatingKeerTien(gesorteerdNummers) {
+  // dit is zodat we nummers met zelfde score nog een keer een score kunnen geven van 1 tot 5
+  for (const [NummerID, Score] of Object.entries(gesorteerdNummers)) {
+    gesorteerdNummers[NummerID] *= 10;
+  }
+  return gesorteerdNummers;
+}
+
+export function groupKeysByValue(obj) {
+  const values = Object.values(obj);
+  const uniqueValues = [...new Set(values)];
+  const grouped = [];
+
+  uniqueValues.forEach((value) => {
+    const keysWithValue = Object.keys(obj).filter((key) => obj[key] === value);
+    if (keysWithValue.length > 1) {
+      grouped.push(keysWithValue);
+    }
+  });
+
+  return grouped;
 }
