@@ -25,3 +25,4 @@ dist-ssr
 /.env
 /src/components/LoadNummers-test-object.js
 /src/components/Playlistcard-test-object.js
+/TODO.md

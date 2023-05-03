@@ -1,11 +1,11 @@
-import { useState, createContext, useRef } from "react";
+import { createContext, useRef, useState } from "react";
 
 import SpotifyLogin from "./components/SpotifyLogin";
-import LoadNummers from "./pages/LoadNummersPage";
+import FinalPlaylist from "./pages/FinalPlaylist";
 import GatherPlaylists from "./pages/GatherPlaylists";
 import GroveSorteer from "./pages/GroveSorteer";
+import LoadNummers from "./pages/LoadNummersPage";
 import PreciezeSorteer from "./pages/preciezeSorteer";
-import FinalPlaylist from "./pages/FinalPlaylist";
 
 import { isRedirect } from "./utils/authUtils";
 import createSpotifyApi from "./utils/useSpotifyApi";
@@ -13,7 +13,7 @@ import createSpotifyApi from "./utils/useSpotifyApi";
 export const globalContext = createContext(null);
 
 function App() {
-  const [stage, setStage] = useState("klaar");
+  const [stage, setStage] = useState("login");
   const [spotifyApi, setSpotifyApi] = useState(null);
   const [Playlist, setPlaylist] = useState(null);
   const [Nummers, setNummers] = useState(null);

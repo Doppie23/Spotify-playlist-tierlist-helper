@@ -1,6 +1,5 @@
-import { useState, useEffect, useContext } from "react";
-import { Card, Box, Typography, CardContent, CardMedia } from "@mui/material";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { useEffect, useState } from "react";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import CardNummer from "./CardNummer";
 
 const StrictModeDroppable = ({ children, ...props }) => {

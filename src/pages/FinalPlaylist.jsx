@@ -1,12 +1,10 @@
-import { Container, Box, Typography, Button } from "@mui/material";
 import ContentPasteIcon from "@mui/icons-material/ContentPaste";
-import { LogOutButton } from "../components/Backbutton";
+import { Box, Button, Container, Typography } from "@mui/material";
 import { useContext, useState } from "react";
-import CardNummer from "../components/CardNummer";
-import { getNummerObjectFromID } from "../utils/RatingUtils";
 import { globalContext } from "../App";
-import { testNummers } from "../components/LoadNummers-test-object";
-import { MakeLinksFromObject } from "../utils/RatingUtils";
+import { LogOutButton } from "../components/Backbutton";
+import CardNummer from "../components/CardNummer";
+import { MakeLinksFromObject, getNummerObjectFromID } from "../utils/RatingUtils";
 
 // let TestGesorteerdeNummerscurrent = {
 //   "5IW243rLPz7bfzJDikLhgw": 105,
@@ -46,7 +44,7 @@ function FinalPlaylist({ GesorteerdeNummers }) {
   const [IconKnop, setIconKnop] = useState(<ContentPasteIcon />);
 
   const ClickHandler = () => {
-    const text = MakeLinksFromObject(GesorteerdeNummers);
+    const text = MakeLinksFromObject(GesorteerdeNummers.current);
     navigator.clipboard.writeText(text);
     setTekstKnop("Gelukt! :)");
     setIconKnop(null);
@@ -73,7 +71,7 @@ function FinalPlaylist({ GesorteerdeNummers }) {
         </Button>
       </Box>
       <Box minWidth={300} mb={10}>
-        {Object.keys(GesorteerdeNummers).map((id) => {
+        {Object.keys(GesorteerdeNummers.current).map((id) => {
           const NummerObject = getNummerObjectFromID(id, Nummers);
           return (
             <Box key={id}>

@@ -1,26 +1,24 @@
-import { Container, Button } from "@mui/material";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { useContext, useState, useRef, createContext, useEffect } from "react";
+import { Button, Container } from "@mui/material";
+import { useContext, useEffect, useRef, useState } from "react";
 import { globalContext } from "../App";
-import { MaakGroepjes } from "../utils/RatingUtils";
 import { LogOutButton } from "../components/Backbutton";
 import DragabbleList from "../components/DraggableList";
 import {
-  VoegScoreBij,
-  CreateObjectWithIdAndScore,
-  sortObjectbyValue,
-  MaakGroepjesMetGesorteerdObject,
-  CheckVoorDubbeleScores,
   AlleRatingKeerTien,
+  CheckVoorDubbeleScores,
+  CreateObjectWithIdAndScore,
+  MaakGroepjes,
+  MaakGroepjesMetGesorteerdObject,
+  VoegScoreBij,
+  sortObjectbyValue,
 } from "../utils/RatingUtils";
-
-import { testNummers } from "../components/LoadNummers-test-object";
 
 // export const ItemsContext = createContext();
 
 function GroveSorteer({ WhenDone }) {
-  // const { Nummers } = useContext(globalContext);
-  const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
+  const { Nummers } = useContext(globalContext);
+  // const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
   const { GrofGesorteerdeNummers } = useContext(globalContext);
   const NummerScoresRef = useRef(CreateObjectWithIdAndScore(Nummers));
   const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(MaakGroepjes(Nummers));

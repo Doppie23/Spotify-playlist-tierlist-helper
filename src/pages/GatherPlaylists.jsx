@@ -1,9 +1,8 @@
-import { useEffect, useState, useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LogOutButton } from "../components/Backbutton";
-import { getUserPlaylists } from "../utils/spotifyUtils";
 import PlaylistsCard from "../components/Playlistcard";
+import { getUserPlaylists } from "../utils/spotifyUtils";
 
-import { Playlists_test } from "../components/Playlistcard-test-object";
 import { Box, Container, Typography } from "@mui/material";
 import { globalContext } from "../App";
 
@@ -13,12 +12,12 @@ function GatherPlaylists() {
 
   useEffect(() => {
     // * voor testen
-    setPlaylists(Playlists_test);
+    // setPlaylists(Playlists_test);
     // * eind
 
-    // getUserPlaylists(spotifyApi).then((userPlaylists) => {
-    //   setPlaylists(userPlaylists);
-    // });
+    getUserPlaylists(spotifyApi).then((userPlaylists) => {
+      setPlaylists(userPlaylists);
+    });
   }, []);
 
   return (

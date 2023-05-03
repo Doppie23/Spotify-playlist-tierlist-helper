@@ -1,13 +1,12 @@
-import { Container, Button } from "@mui/material";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { useState, useRef, createContext, useContext } from "react";
+import { Button, Container } from "@mui/material";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { globalContext } from "../App";
 import { LogOutButton } from "../components/Backbutton";
 import DragabbleList from "../components/DraggableList";
-import { globalContext } from "../App";
 
-import { groupKeysByValue } from "../utils/RatingUtils";
+import { CheckVoorScoreVakerVoorkomt, groupKeysByValue } from "../utils/RatingUtils";
 
-import { testNummers } from "../components/LoadNummers-test-object";
 // * voor test
 // let testRating = {
 //   "7fdH9c2DRXvoUNZb5awMkc": 100,
@@ -43,14 +42,23 @@ import { testNummers } from "../components/LoadNummers-test-object";
 export const ItemsContext = createContext();
 
 function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
-  // const { Nummers } = useContext(globalContext);
-  const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
+  const { Nummers } = useContext(globalContext);
+  // const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
+  const [DubbeleNummerRatings, setDubbeleNummerRatings] = useState(false); // voor als er geen dubbele waardes zijn
 
   const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(groupKeysByValue(GesorteerdeNummers.current, Nummers));
   // const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(groupKeysByValue(testRating, Nummers)); // * voor test adnmer bocen
   const IndexGroepRef = useRef(0);
 
   const [CurritemList, setCurrItemList] = useState(GegroepeerdeNummers[IndexGroepRef.current]);
+
+  useEffect(() => {
+    if (CheckVoorScoreVakerVoorkomt(GesorteerdeNummers.current)) {
+      setDubbeleNummerRatings(true);
+    } else {
+      WhenDone();
+    }
+  }, []);
 
   const NextClicked = () => {
     const itemlist = [...CurritemList];
@@ -68,13 +76,19 @@ function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
 
   return (
     <Container sx={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-      <LogOutButton />
-      <ItemsContext.Provider value={{ CurritemList, setCurrItemList }}>
-        <DragabbleList CurritemList={CurritemList} setCurrItemList={setCurrItemList} />
-      </ItemsContext.Provider>
-      <Button variant="contained" sx={{ position: "relative", top: 10 }} endIcon={<NavigateNextIcon />} onClick={NextClicked}>
-        Next
-      </Button>
+      {DubbeleNummerRatings ? (
+        <>
+          <LogOutButton />
+          <ItemsContext.Provider value={{ CurritemList, setCurrItemList }}>
+            <DragabbleList CurritemList={CurritemList} setCurrItemList={setCurrItemList} />
+          </ItemsContext.Provider>
+          <Button variant="contained" sx={{ position: "relative", top: 10 }} endIcon={<NavigateNextIcon />} onClick={NextClicked}>
+            Next
+          </Button>
+        </>
+      ) : (
+        <></>
+      )}
     </Container>
   );
 }

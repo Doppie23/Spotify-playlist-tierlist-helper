@@ -1,5 +1,3 @@
-import { testNummers } from "../components/LoadNummers-test-object.js";
-
 function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
@@ -100,6 +98,12 @@ export function CheckVoorDubbeleScores(obj) {
     }
   }
   return false;
+}
+
+export function CheckVoorScoreVakerVoorkomt(obj) {
+  const values = Object.values(obj);
+  const uniqueValues = new Set(values);
+  return values.length !== uniqueValues.size;
 }
 
 export function AlleRatingKeerTien(gesorteerdNummers) {
