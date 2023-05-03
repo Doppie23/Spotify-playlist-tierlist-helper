@@ -1,9 +1,10 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useRef } from "react";
 
 import SpotifyLogin from "./components/SpotifyLogin";
 import LoadNummers from "./pages/LoadNummersPage";
 import GatherPlaylists from "./pages/GatherPlaylists";
-import MainPage from "./pages/MainPage";
+import GroveSorteer from "./pages/GroveSorteer";
+import KlaarMetSorteren from "./pages/KlaarMetSorteren";
 
 import { isRedirect } from "./utils/authUtils";
 import createSpotifyApi from "./utils/useSpotifyApi";
@@ -11,10 +12,11 @@ import createSpotifyApi from "./utils/useSpotifyApi";
 export const globalContext = createContext(null);
 
 function App() {
-  const [stage, setStage] = useState("app");
+  const [stage, setStage] = useState("groveSorteer");
   const [spotifyApi, setSpotifyApi] = useState(null);
   const [Playlist, setPlaylist] = useState(null);
   const [Nummers, setNummers] = useState(null);
+  const GrofGesorteerdeNummers = useRef({});
 
   useState(() => {
     // check if redirect voor auth key
@@ -38,6 +40,7 @@ function App() {
         setPlaylist,
         Nummers,
         setNummers,
+        GrofGesorteerdeNummers,
       }}
     >
       {stage === "login" && (
@@ -48,8 +51,15 @@ function App() {
         />
       )}
       {stage === "playlist" && <GatherPlaylists />}
-      {stage === "gathernummers" && <LoadNummers />}
-      {stage === "app" && <MainPage />}
+      {stage === "gathernummers" && <LoadNummers WhenDone={() => setStage("groveSorteer")} />}
+      {stage === "groveSorteer" && (
+        <GroveSorteer
+          WhenDone={() => {
+            setStage("gesorteerd");
+          }}
+        />
+      )}
+      {stage === "gesorteerd" && <KlaarMetSorteren />}
     </globalContext.Provider>
   );
 }

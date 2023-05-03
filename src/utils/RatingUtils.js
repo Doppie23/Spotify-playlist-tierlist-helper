@@ -63,3 +63,41 @@ export function CreateObjectWithIdAndScore(Nummers) {
   });
   return object;
 }
+
+export function sortObjectbyValue(obj = {}, asc = false) {
+  const ret = {};
+  Object.keys(obj)
+    .sort((a, b) => obj[asc ? a : b] - obj[asc ? b : a])
+    .forEach((s) => (ret[s] = obj[s]));
+  return ret;
+}
+
+export function MaakGroepjesMetGesorteerdObject(Nummers, sortedObject) {
+  function getNummerObjectWithID(id, Nummers) {
+    let nummerNodig = null;
+    Nummers.forEach((nummer) => {
+      if (nummer.track.id == id) {
+        nummerNodig = nummer;
+      }
+    });
+    return nummerNodig;
+  }
+
+  let listtMetNummersGesorteerd = [];
+  for (const [NummerID, Score] of Object.entries(sortedObject)) {
+    listtMetNummersGesorteerd.push(getNummerObjectWithID(NummerID, Nummers));
+  }
+  return MaakGroepjes(listtMetNummersGesorteerd);
+}
+
+export function CheckVoorDubbeleScores(obj) {
+  const values = Object.values(obj);
+  const uniqueValues = new Set(values);
+  for (const val of uniqueValues) {
+    const count = values.filter((v) => v === val).length;
+    if (count > 3) {
+      return true;
+    }
+  }
+  return false;
+}

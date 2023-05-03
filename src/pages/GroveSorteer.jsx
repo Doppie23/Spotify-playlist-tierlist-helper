@@ -1,18 +1,25 @@
 import { Container, Button } from "@mui/material";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { useContext, useState, useRef, createContext } from "react";
+import { useContext, useState, useRef, createContext, useEffect } from "react";
 import { globalContext } from "../App";
 import { MaakGroepjes } from "../utils/RatingUtils";
 import { LogOutButton } from "../components/Backbutton";
 import DragabbleList from "../components/DraggableList";
-import { VoegScoreBij, CreateObjectWithIdAndScore, sortObjectbyValue, MaakGroepjesMetGesorteerdObject } from "../utils/RatingUtils";
+import {
+  VoegScoreBij,
+  CreateObjectWithIdAndScore,
+  sortObjectbyValue,
+  MaakGroepjesMetGesorteerdObject,
+  CheckVoorDubbeleScores,
+} from "../utils/RatingUtils";
 
 import { testNummers } from "../components/LoadNummers-test-object";
 
 export const ItemsContext = createContext();
 
-function MainPage() {
+function GroveSorteer({ WhenDone }) {
   // const { Nummers } = useContext(globalContext);
+  const { GrofGesorteerdeNummers } = useContext(globalContext);
   const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
   const NummerScoresRef = useRef(CreateObjectWithIdAndScore(Nummers));
   const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(MaakGroepjes(Nummers));
@@ -21,34 +28,39 @@ function MainPage() {
   const [CurritemList, setCurrItemList] = useState(GegroepeerdeNummers[IndexGroepRef.current]);
 
   const NextClicked = () => {
-    let NummersmetScore = { ...NummerScoresRef.current };
     const itemlist = [...CurritemList];
     itemlist.forEach((nummer, index) => {
-      // console.log("scorebij", nummer, "op plek", index);
-      NummersmetScore = VoegScoreBij(NummersmetScore, index, nummer);
+      NummerScoresRef.current = VoegScoreBij(NummerScoresRef.current, index, nummer);
     });
     if (IndexGroepRef.current == GegroepeerdeNummers.length - 1) {
       console.log("end of list");
-      NummersmetScore = sortObjectbyValue(NummersmetScore);
-      NummerScoresRef.current = { ...NummersmetScore };
+      const gesorteerdeNummers = sortObjectbyValue(NummerScoresRef.current);
+      NummerScoresRef.current = gesorteerdeNummers;
+      // NummerScoresRef.current = { ...NummersmetScore };
 
       // todo eerst checken of er nog dubbele scores zijn
-      StartNogEenSorteerRonde();
-      // console.log(MaakGroepjesMetGesorteerdObject(Nummers, NummersmetScore));
-      // setGegroepeerdeNummers(MaakGroepjesMetGesorteerdObject(Nummers, NummersmetScore));
+      if (CheckVoorDubbeleScores(gesorteerdeNummers)) {
+        StartNogEenSorteerRonde();
+        return;
+      } else {
+        WhenDone();
+        GrofGesorteerdeNummers.current = gesorteerdeNummers;
+      }
+
       return;
     } else {
-      NummerScoresRef.current = { ...NummersmetScore };
       IndexGroepRef.current += 1;
       setCurrItemList(GegroepeerdeNummers[IndexGroepRef.current]);
     }
-    console.log(NummerScoresRef.current);
   };
+
+  useEffect(() => {
+    setCurrItemList(GegroepeerdeNummers[IndexGroepRef.current]);
+  }, [GegroepeerdeNummers]);
 
   const StartNogEenSorteerRonde = () => {
     setGegroepeerdeNummers(MaakGroepjesMetGesorteerdObject(Nummers, NummerScoresRef.current));
     IndexGroepRef.current = 0;
-    setCurrItemList(GegroepeerdeNummers[IndexGroepRef.current]);
   };
 
   return (
@@ -64,4 +76,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default GroveSorteer;

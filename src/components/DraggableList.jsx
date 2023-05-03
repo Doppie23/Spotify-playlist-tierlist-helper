@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { ItemsContext } from "../pages/MainPage";
+import { ItemsContext } from "../pages/GroveSorteer";
 
 const StrictModeDroppable = ({ children, ...props }) => {
   const [enabled, setEnabled] = useState(false);

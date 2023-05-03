@@ -8,13 +8,13 @@ import { getAllSongs } from "../utils/spotifyUtils";
 
 import { testNummers } from "../components/LoadNummers-test-object";
 
-function LoadNummers() {
-  const { Playlist, spotifyApi, setNummers, setStage } = useContext(globalContext);
+function LoadNummers({ WhenDone }) {
+  const { Playlist, spotifyApi, setNummers } = useContext(globalContext);
 
   useEffect(() => {
     // * voor testen
     setNummers(testNummers);
-    setStage("app");
+    WhenDone();
     // * eind
 
     // getAllSongs(Playlist.id, spotifyApi)
