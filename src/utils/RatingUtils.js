@@ -110,7 +110,7 @@ export function AlleRatingKeerTien(gesorteerdNummers) {
   return gesorteerdNummers;
 }
 
-export function groupKeysByValue(obj) {
+export function groupKeysByValue(obj, Nummers) {
   const values = Object.values(obj);
   const uniqueValues = [...new Set(values)];
   const grouped = [];
@@ -118,9 +118,29 @@ export function groupKeysByValue(obj) {
   uniqueValues.forEach((value) => {
     const keysWithValue = Object.keys(obj).filter((key) => obj[key] === value);
     if (keysWithValue.length > 1) {
-      grouped.push(keysWithValue);
+      const objectsWithValue = keysWithValue.map((key) => getNummerObjectFromID(key, Nummers));
+      grouped.push(objectsWithValue);
     }
   });
 
   return grouped;
+}
+
+export function getNummerObjectFromID(id, Nummers) {
+  let nummerNodig = null;
+  Nummers.forEach((nummer) => {
+    if (nummer.track.id == id) {
+      nummerNodig = nummer;
+    }
+  });
+  return nummerNodig;
+}
+
+export function MakeLinksFromObject(object) {
+  let text = "";
+  Object.keys(object).forEach((id) => {
+    const spotifyLink = `https://open.spotify.com/track/${id}`;
+    text += spotifyLink + "\n";
+  });
+  return text;
 }

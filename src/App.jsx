@@ -5,6 +5,7 @@ import LoadNummers from "./pages/LoadNummersPage";
 import GatherPlaylists from "./pages/GatherPlaylists";
 import GroveSorteer from "./pages/GroveSorteer";
 import PreciezeSorteer from "./pages/preciezeSorteer";
+import FinalPlaylist from "./pages/FinalPlaylist";
 
 import { isRedirect } from "./utils/authUtils";
 import createSpotifyApi from "./utils/useSpotifyApi";
@@ -12,7 +13,7 @@ import createSpotifyApi from "./utils/useSpotifyApi";
 export const globalContext = createContext(null);
 
 function App() {
-  const [stage, setStage] = useState("PreciesSorteer");
+  const [stage, setStage] = useState("klaar");
   const [spotifyApi, setSpotifyApi] = useState(null);
   const [Playlist, setPlaylist] = useState(null);
   const [Nummers, setNummers] = useState(null);
@@ -59,7 +60,8 @@ function App() {
           }}
         />
       )}
-      {stage === "PreciesSorteer" && <PreciezeSorteer />}
+      {stage === "PreciesSorteer" && <PreciezeSorteer GesorteerdeNummers={GrofGesorteerdeNummers} WhenDone={() => setStage("klaar")} />}
+      {stage === "klaar" && <FinalPlaylist GesorteerdeNummers={GrofGesorteerdeNummers} />}
     </globalContext.Provider>
   );
 }

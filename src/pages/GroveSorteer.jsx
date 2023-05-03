@@ -16,12 +16,12 @@ import {
 
 import { testNummers } from "../components/LoadNummers-test-object";
 
-export const ItemsContext = createContext();
+// export const ItemsContext = createContext();
 
 function GroveSorteer({ WhenDone }) {
   // const { Nummers } = useContext(globalContext);
-  const { GrofGesorteerdeNummers } = useContext(globalContext);
   const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
+  const { GrofGesorteerdeNummers } = useContext(globalContext);
   const NummerScoresRef = useRef(CreateObjectWithIdAndScore(Nummers));
   const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(MaakGroepjes(Nummers));
   const IndexGroepRef = useRef(0);
@@ -67,9 +67,7 @@ function GroveSorteer({ WhenDone }) {
   return (
     <Container sx={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
       <LogOutButton />
-      <ItemsContext.Provider value={{ CurritemList, setCurrItemList }}>
-        <DragabbleList items={GegroepeerdeNummers[IndexGroepRef.current]} />
-      </ItemsContext.Provider>
+      <DragabbleList CurritemList={CurritemList} setCurrItemList={setCurrItemList} />
       <Button variant="contained" sx={{ position: "relative", top: 10 }} endIcon={<NavigateNextIcon />} onClick={NextClicked}>
         Next
       </Button>
