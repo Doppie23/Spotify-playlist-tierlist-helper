@@ -5,7 +5,7 @@ import { globalContext } from "../App";
 import { MaakGroepjes } from "../utils/RatingUtils";
 import { LogOutButton } from "../components/Backbutton";
 import DragabbleList from "../components/DraggableList";
-import { VoegScoreBij, CreateObjectWithIdAndScore } from "../utils/RatingUtils";
+import { VoegScoreBij, CreateObjectWithIdAndScore, sortObjectbyValue, MaakGroepjesMetGesorteerdObject } from "../utils/RatingUtils";
 
 import { testNummers } from "../components/LoadNummers-test-object";
 
@@ -14,29 +14,42 @@ export const ItemsContext = createContext();
 function MainPage() {
   // const { Nummers } = useContext(globalContext);
   const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
-  const [NummerScores, setNummerScores] = useState(CreateObjectWithIdAndScore(Nummers));
+  const NummerScoresRef = useRef(CreateObjectWithIdAndScore(Nummers));
   const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(MaakGroepjes(Nummers));
   const IndexGroepRef = useRef(0);
 
   const [CurritemList, setCurrItemList] = useState(GegroepeerdeNummers[IndexGroepRef.current]);
 
   const NextClicked = () => {
-    let NummersmetScore = { ...NummerScores };
+    let NummersmetScore = { ...NummerScoresRef.current };
     const itemlist = [...CurritemList];
     itemlist.forEach((nummer, index) => {
+      // console.log("scorebij", nummer, "op plek", index);
       NummersmetScore = VoegScoreBij(NummersmetScore, index, nummer);
     });
-    setNummerScores({ ...NummersmetScore });
     if (IndexGroepRef.current == GegroepeerdeNummers.length - 1) {
       console.log("end of list");
+      NummersmetScore = sortObjectbyValue(NummersmetScore);
+      NummerScoresRef.current = { ...NummersmetScore };
+
+      // todo eerst checken of er nog dubbele scores zijn
+      StartNogEenSorteerRonde();
+      // console.log(MaakGroepjesMetGesorteerdObject(Nummers, NummersmetScore));
+      // setGegroepeerdeNummers(MaakGroepjesMetGesorteerdObject(Nummers, NummersmetScore));
       return;
     } else {
+      NummerScoresRef.current = { ...NummersmetScore };
       IndexGroepRef.current += 1;
       setCurrItemList(GegroepeerdeNummers[IndexGroepRef.current]);
     }
+    console.log(NummerScoresRef.current);
   };
 
-  // todo - bij een knop klik als klaar gaat index omhoog krijgen curr in Nummers er de jusite score bij (lenlist - index)
+  const StartNogEenSorteerRonde = () => {
+    setGegroepeerdeNummers(MaakGroepjesMetGesorteerdObject(Nummers, NummerScoresRef.current));
+    IndexGroepRef.current = 0;
+    setCurrItemList(GegroepeerdeNummers[IndexGroepRef.current]);
+  };
 
   return (
     <Container sx={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
