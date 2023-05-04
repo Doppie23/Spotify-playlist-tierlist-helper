@@ -109,6 +109,9 @@ export function CheckVoorScoreVakerVoorkomt(obj) {
 export function AlleRatingKeerTien(gesorteerdNummers) {
   // dit is zodat we nummers met zelfde score nog een keer een score kunnen geven van 1 tot 5
   for (const [NummerID, Score] of Object.entries(gesorteerdNummers)) {
+    if (Score == 0) {
+      gesorteerdNummers[NummerID] = 10;
+    }
     gesorteerdNummers[NummerID] *= 10;
   }
   return gesorteerdNummers;
@@ -121,8 +124,16 @@ export function groupKeysByValue(obj, Nummers) {
 
   uniqueValues.forEach((value) => {
     const keysWithValue = Object.keys(obj).filter((key) => obj[key] === value);
+    const objectsWithValue = keysWithValue.map((key) => getNummerObjectFromID(key, Nummers));
     if (keysWithValue.length > 1) {
-      const objectsWithValue = keysWithValue.map((key) => getNummerObjectFromID(key, Nummers));
+      const numGroups = Math.ceil(keysWithValue.length / 5);
+      for (let i = 0; i < numGroups; i++) {
+        const startIndex = i * 5;
+        const endIndex = Math.min(startIndex + 5, keysWithValue.length);
+        const group = objectsWithValue.slice(startIndex, endIndex);
+        grouped.push(group);
+      }
+    } else {
       grouped.push(objectsWithValue);
     }
   });

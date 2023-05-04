@@ -1,8 +1,9 @@
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { Button, Container } from "@mui/material";
+import { Button, Container, Box } from "@mui/material";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { globalContext } from "../App";
-import { LogOutButton } from "../components/Backbutton";
+import TopBalk from "../components/TopBalk";
+import { LogOutButton } from "../components/BackButton";
 import DragabbleList from "../components/DraggableList";
 
 import { CheckVoorScoreVakerVoorkomt, groupKeysByValue } from "../utils/RatingUtils";
@@ -66,7 +67,6 @@ function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
       GesorteerdeNummers.current[nummer.track.id] += 5 - index;
     });
     if (IndexGroepRef.current == GegroepeerdeNummers.length - 1) {
-      console.log("end of list");
       WhenDone();
     } else {
       IndexGroepRef.current += 1;
@@ -79,6 +79,18 @@ function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
       {DubbeleNummerRatings ? (
         <>
           <LogOutButton />
+          <Box
+            sx={{
+              position: "relative",
+              bottom: 50,
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              overflow: "auto",
+            }}
+          >
+            <TopBalk currPagina={"Precieze-sorteer"} />
+          </Box>
           <ItemsContext.Provider value={{ CurritemList, setCurrItemList }}>
             <DragabbleList CurritemList={CurritemList} setCurrItemList={setCurrItemList} />
           </ItemsContext.Provider>

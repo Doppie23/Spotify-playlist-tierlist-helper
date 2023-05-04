@@ -2,7 +2,7 @@ import ContentPasteIcon from "@mui/icons-material/ContentPaste";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import { globalContext } from "../App";
-import { LogOutButton } from "../components/Backbutton";
+import { LogOutButton } from "../components/BackButton";
 import CardNummer from "../components/CardNummer";
 import { MakeLinksFromObject, getNummerObjectFromID } from "../utils/RatingUtils";
 
