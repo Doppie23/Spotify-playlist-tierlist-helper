@@ -1,10 +1,13 @@
+import { PropTypes } from "prop-types";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 
 function TopBalk({ currPagina, clickHandler }) {
   if (currPagina === "groveSorteer") {
     return (
       <Breadcrumbs aria-label="breadcrumb">
-        <Typography color="text.primary">Globale Sorteer</Typography>
+        <Typography color="text.primary" sx={{ cursor: "default" }}>
+          Globale Sorteer
+        </Typography>
         <Link underline="hover" sx={{ cursor: "pointer" }} color="inherit" onClick={clickHandler}>
           Precieze Sorteer
         </Link>
@@ -23,5 +26,10 @@ function TopBalk({ currPagina, clickHandler }) {
     );
   }
 }
+
+TopBalk.propTypes = {
+  currPagina: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default TopBalk;

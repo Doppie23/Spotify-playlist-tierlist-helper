@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Button, Container, Box } from "@mui/material";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
@@ -47,7 +48,7 @@ function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
   // const [Nummers, setNummers] = useState(testNummers); // * voor testen anders hierboven
   const [DubbeleNummerRatings, setDubbeleNummerRatings] = useState(false); // voor als er geen dubbele waardes zijn
 
-  const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(groupKeysByValue(GesorteerdeNummers.current, Nummers));
+  const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(groupKeysByValue(GesorteerdeNummers.current, Nummers)); // eslint-disable-line
   // const [GegroepeerdeNummers, setGegroepeerdeNummers] = useState(groupKeysByValue(testRating, Nummers)); // * voor test adnmer bocen
   const IndexGroepRef = useRef(0);
 
@@ -59,7 +60,7 @@ function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
     } else {
       WhenDone();
     }
-  }, []);
+  }, []); // eslint-disable-line
 
   const NextClicked = () => {
     const itemlist = [...CurritemList];
@@ -104,5 +105,10 @@ function PreciezeSorteer({ GesorteerdeNummers, WhenDone }) {
     </Container>
   );
 }
+
+PreciezeSorteer.propTypes = {
+  WhenDone: PropTypes.func.isRequired,
+  GesorteerdeNummers: PropTypes.object.isRequired,
+};
 
 export default PreciezeSorteer;

@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import { useEffect, useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import CardNummer from "./CardNummer";
@@ -15,6 +16,10 @@ const StrictModeDroppable = ({ children, ...props }) => {
     return null;
   }
   return <Droppable {...props}>{children}</Droppable>;
+};
+
+StrictModeDroppable.propTypes = {
+  children: PropTypes.node,
 };
 
 function DragabbleList({ CurritemList, setCurrItemList }) {
@@ -57,4 +62,8 @@ function DragabbleList({ CurritemList, setCurrItemList }) {
   );
 }
 
+DragabbleList.propTypes = {
+  CurritemList: PropTypes.array,
+  setCurrItemList: PropTypes.func,
+};
 export default DragabbleList;

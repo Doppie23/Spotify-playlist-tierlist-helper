@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import { Box, Button } from "@mui/material";
 
 function SkipSortButton({ SkipHandler }) {
@@ -14,4 +15,7 @@ function SkipSortButton({ SkipHandler }) {
   );
 }
 
+SkipSortButton.propTypes = {
+  SkipHandler: PropTypes.func.isRequired,
+};
 export default SkipSortButton;

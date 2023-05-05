@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { LogOutButton } from "../components/Backbutton";
+import { LogOutButton } from "../components/BackButton";
 import PlaylistsCard from "../components/Playlistcard";
 import { getUserPlaylists } from "../utils/spotifyUtils";
 
@@ -18,7 +18,7 @@ function GatherPlaylists() {
     getUserPlaylists(spotifyApi).then((userPlaylists) => {
       setPlaylists(userPlaylists);
     });
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <Container>

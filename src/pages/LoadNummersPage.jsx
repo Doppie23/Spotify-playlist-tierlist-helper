@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import { Container } from "@mui/material";
 import { useContext, useEffect } from "react";
 import { globalContext } from "../App";
@@ -22,7 +23,7 @@ function LoadNummers({ WhenDone }) {
       .catch((e) => {
         console.log(e);
       });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Container sx={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
@@ -30,5 +31,9 @@ function LoadNummers({ WhenDone }) {
     </Container>
   );
 }
+
+LoadNummers.propTypes = {
+  WhenDone: PropTypes.func.isRequired,
+};
 
 export default LoadNummers;

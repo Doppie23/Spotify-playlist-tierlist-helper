@@ -32,3 +32,7 @@ export function LogOutButton() {
     </Box>
   );
 }
+
+BackButton.propTypes = {
+  newstage: String,
+};

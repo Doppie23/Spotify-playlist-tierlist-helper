@@ -1,4 +1,5 @@
-import { Card, CardContent, CardHeader, CardMedia, Grid, Typography } from "@mui/material";
+import { PropTypes } from "prop-types";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 
 import { globalContext } from "../App";
 import { useContext } from "react";
@@ -33,4 +34,7 @@ function PlaylistsCard({ playlists }) {
   );
 }
 
+PlaylistsCard.propTypes = {
+  playlists: PropTypes.array,
+};
 export default PlaylistsCard;

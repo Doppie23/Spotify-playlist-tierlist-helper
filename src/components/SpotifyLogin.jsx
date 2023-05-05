@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import { Button, Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
@@ -52,8 +53,8 @@ function SpotifyLogin({ setLoggedIn }) {
           nauwkeurig resultaat komt. Een globale fase en een precieze fase.
         </Typography>
         <Typography variant="body1" color={"text.secondary"} my={1} textAlign={"justify"}>
-          En als je het gevoel hebt dat je wat haast hebt kan op de knop "Precieze&nbsp;Sorteer" klikken en kan je de globale sorteer fase
-          overslaan en direct doorgaan naar de precieze sorteer fase.
+          En als je het gevoel hebt dat je wat haast hebt kan op de knop <q>Precieze&nbsp;Sorteer</q> klikken en kan je de globale sorteer
+          fase overslaan en direct doorgaan naar de precieze sorteer fase.
         </Typography>
         <Typography variant="body1" color={"text.secondary"} my={1} textAlign={"justify"}>
           Met deze app kun je makkelijk en snel persoonlijke Spotify toplijsten maken, zonder gedoe of stress. Dus waar wacht je nog op?
@@ -71,5 +72,9 @@ function SpotifyLogin({ setLoggedIn }) {
     </Box>
   );
 }
+
+SpotifyLogin.propTypes = {
+  setLoggedIn: PropTypes.func,
+};
 
 export default SpotifyLogin;

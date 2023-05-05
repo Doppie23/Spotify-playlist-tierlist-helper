@@ -1,9 +1,9 @@
+import { PropTypes } from "prop-types";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Box, Button, Container } from "@mui/material";
 import { useContext, useEffect, useRef, useState } from "react";
 import { globalContext } from "../App";
 import { LogOutButton } from "../components/BackButton";
-import SkipSortButton from "../components/SkipSortButton";
 import DragabbleList from "../components/DraggableList";
 import TopBalk from "../components/TopBalk";
 import {
@@ -104,5 +104,9 @@ function GroveSorteer({ WhenDone }) {
     </Container>
   );
 }
+
+GroveSorteer.propTypes = {
+  WhenDone: PropTypes.func,
+};
 
 export default GroveSorteer;

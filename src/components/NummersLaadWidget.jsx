@@ -1,4 +1,3 @@
-import * as React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 

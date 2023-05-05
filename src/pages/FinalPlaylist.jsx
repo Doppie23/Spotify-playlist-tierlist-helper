@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import ContentPasteIcon from "@mui/icons-material/ContentPaste";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { useContext, useState } from "react";
@@ -83,5 +84,9 @@ function FinalPlaylist({ GesorteerdeNummers }) {
     </Container>
   );
 }
+
+FinalPlaylist.propTypes = {
+  GesorteerdeNummers: PropTypes.object,
+};
 
 export default FinalPlaylist;
